@@ -8,33 +8,34 @@
     <title>Partie - laravel</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <style>
+    </style>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">Mon Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('/') }}">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('formation')}}">Formations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('etudiant') }}">Etudiants</a>
-                </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="{{ route('vote') }}">Lieu De Vote</a>--}}
-{{--                </li>--}}
-            </ul>
+<body class="bg-secondary ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">Mon Site</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="{{ url('/') }}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{route('formation')}}">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ route('etudiant') }}">Etudiants</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+@yield('content')
+
 </body>
 </html>
 
-@yield('content')
+
