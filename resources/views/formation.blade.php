@@ -15,8 +15,8 @@
             <tr class="border-2">
                 <td  scope="col">{{ $f->id }}</td>
                 <td  scope="col">{{ $f->nom_formation }}</td>
-                <td  scope="col">{{ $f->duree_formation }}</td>
-                <td  scope="col">{{ $f->prix}}</td>
+                <td  scope="col">{{ $f->duree_formation }} Ans</td>
+                <td  scope="col">{{ $f->prix}} FCFA</td>
             </tr>
         @endforeach
 

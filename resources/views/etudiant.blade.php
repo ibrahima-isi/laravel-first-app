@@ -16,7 +16,7 @@
                 <td  scope="col">{{ $e->id }}</td>
                 <td  scope="col">{{ $e->nom }}</td>
                 <td  scope="col">{{ $e->prenom }}</td>
-                <td  scope="col">{{ $e->age}}</td>
+                <td  scope="col">{{ $e->age}} ans</td>
             </tr>
         @endforeach
 

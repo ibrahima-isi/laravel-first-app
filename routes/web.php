@@ -24,7 +24,8 @@ Route::get('/formation', '\App\Http\Controllers\ClasseController@index')->name('
 // route vers le formulaire d'ajout de formation:
 Route::get('/ajoutFormation', '\App\Http\Controllers\ClasseController@create')->name('ajoutFormation');
 // Recuperation donnees du formulaire:
-Route::post('frm_store', '\App\Http\Controllers\ClasseController@store')->name('store_formation');
+//Route::post('frm_store', '\App\Http\Controllers\ClasseController@store')->name('store_formation');
+Route::post('frm_store_fmt', [\App\Http\Controllers\ClasseController::class, 'store'])->name('store_formation');
 
 // Routes concernants les etudiants:
 // Liste Etudiants:
@@ -32,4 +33,4 @@ Route::get('/etudiant', [\App\Http\Controllers\EtudiantController::class, 'index
 // Vers Ajout etudiant:
 Route::get('/ajoutEtudiant', '\App\Http\Controllers\EtudiantController@create')->name('ajout_etudiant');
 // Recuperation des donnees du formulaire:
-Route::post('frm_store', '\App\Http\Controllers\EtudiantController@store')->name('store_etudiant');
+Route::post('frm_store_etu', '\App\Http\Controllers\EtudiantController@store')->name('store_etudiant');

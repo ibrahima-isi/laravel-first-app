@@ -18,6 +18,8 @@ class EtudiantController extends Controller
 
     /**
      * Show the form for creating a new resource.
+     * Dans la methode create j'instancie un objet de type @Etudiant pour l'envoyer dans le formulaire et
+     * recuperer les data du formulaires dans cet objet
      */
     public function create()
     {
@@ -27,6 +29,7 @@ class EtudiantController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * Dans store, je recupere les données envoyées par le formulaire et je les enverrai a la base de données
      */
     public function store(Request $request)
     {
