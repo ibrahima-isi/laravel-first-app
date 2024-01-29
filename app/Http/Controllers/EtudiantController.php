@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class EtudiantController extends Controller
 {
+
+    public function search(Request $request){
+
+        $etudiant = null;
+        $search_input = $request->input('name');
+        if($search_input){
+            $search_input = strtolower(trim($search_input));
+            $etudiant = Etudiant::whereRaw('LOWER(nom) LIKE ? ', ['%'.$search_input.'%'])->get();
+            if($etudiant){
+                return view('etudiant', ['etudiants' => $etudiant])->with('success', 'Étudiant trouvé');
+            }
+        }
+        return to_route('etudiant', ['etudiants' => $etudiant])->with('error', 'Etudiant introuvable');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -47,7 +61,7 @@ class EtudiantController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**

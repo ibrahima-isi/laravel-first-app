@@ -17,9 +17,8 @@
                 <input type="text" name="prix" id="prix" class="form-control">
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn-info" >Ajouter </button>
+                <button type="submit" class="btn-info" >Ajouter</button>
             </div>
         </form>
     </div>
-
 @endsection

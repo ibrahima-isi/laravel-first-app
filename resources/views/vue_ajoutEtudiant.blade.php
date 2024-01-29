@@ -13,13 +13,12 @@
                 <input type="text" name="prenom" id="duree" class="form-control">
             </div>
             <div class="mb-3">
-                <label for="prix" class="col-form-label col-sm-2">age de l'etudiant :</label>
-                <input type="text" name="age" id="prix" class="form-control">
+                <label for="age" class="col-form-label col-sm-2">age de l'etudiant :</label>
+                <input type="text" name="age" id="age" class="form-control">
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn-info" >Ajouter </button>
+                <button type="submit" class="btn-info" >Ajouter</button>
             </div>
         </form>
     </div>
-
 @endsection

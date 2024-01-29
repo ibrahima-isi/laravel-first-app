@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\EtudiantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,6 @@ Route::get('/etudiant', [\App\Http\Controllers\EtudiantController::class, 'index
 Route::get('/ajoutEtudiant', '\App\Http\Controllers\EtudiantController@create')->name('ajout_etudiant');
 // Recuperation des donnees du formulaire:
 Route::post('frm_store_etu', '\App\Http\Controllers\EtudiantController@store')->name('store_etudiant');
+// search
+Route::get('/search', '\App\Http\Controllers\EtudiantController@search')->name('search-student');
+
